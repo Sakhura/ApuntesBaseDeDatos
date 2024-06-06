@@ -56,4 +56,50 @@ DESCRIBE empleados;
 
 DROP TABLE nombre_de_tabla;
 
+-- TIPOS DE DATOS EN BASE DE DATOS
+
+-- Numéricos
+-- INT: Entero, puede ser unsigned o signed.
+-- FLOAT: Número decimal, puede ser unsigned o signed.
+-- DECIMAL: Número decimal con precisión y escala definidas.
+-- BIT: Número entero que puede tener un valor de 0 o 1.
+
+-- Fecha y Hora
+-- DATE: Fecha, en formato YYYY-MM-DD.
+-- TIME: Hora, en formato HH:MM:SS.
+-- DATETIME: Fecha y hora, en formato YYYY-MM-DD HH:MM:SS.
+-- TIMESTAMP: Fecha y hora, en formato YYYY-MM-DD HH:MM:SS, con zona horaria.
+-- YEAR: Año, en formato YYYY.
+
+-- Cadenas de Caracteres
+-- CHAR: Cadena de caracteres de longitud fija.
+-- VARCHAR: Cadena de caracteres de longitud variable.
+-- TEXT: Cadena de caracteres de longitud variable, utilizado para almacenar texto grande.
+-- ENUM: Cadena de caracteres que puede tener un valor entre una lista de opciones definidas.
+-- SET: Cadena de caracteres que puede tener varios valores entre una lista de opciones definidas.
+
+-- Otros
+-- BLOB: Almacenamiento de datos binarios, como imágenes o archivos.
+-- JSON: Almacenamiento de datos en formato JSON.
+
+-- EJEMPLO DE CREACION DE TABLAS CON DISTINTOS TIPOS DE DATOS
+CREATE TABLE empleados (
+  id INT PRIMARY KEY,
+  nombre VARCHAR(255),
+  fecha_nacimiento DATE,
+  hora_entrada TIME
+);
+
+CREATE TABLE productos (
+  id INT PRIMARY KEY,
+  nombre VARCHAR(255),
+  precio DECIMAL(10, 2),
+  fecha_creacion TIMESTAMP
+);
+
+CREATE TABLE configuracion (
+  id INT PRIMARY KEY,
+  valor ENUM('si', 'no'),
+  descripcion TEXT
+);
 
