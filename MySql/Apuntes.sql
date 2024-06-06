@@ -43,3 +43,17 @@ SELECT departamentos.nombre AS nombre_departamento, COUNT(empleados.id) AS canti
 FROM departamentos
 LEFT JOIN empleados ON departamentos.id = empleados.departamento_id
 GROUP BY departamentos.id;
+
+-- ver tablas que exiten
+
+SHOW TABLES;
+
+-- ver la estructura de una tabla usamos el comando "describe" junto al nombre de la tabla:
+
+DESCRIBE empleados;
+
+-- Para eliminar una tabla usamos "drop table". Tipeamos:
+
+DROP TABLE nombre_de_tabla;
+
+
